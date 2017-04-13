@@ -1,0 +1,15 @@
+[user]
+    name = Shawn Milochik
+    email = shawn@milochik.com
+[alias]
+    hist = log --format=\"%n%Cgreen%P..%H%n%Creset%an %ad (%ar)%n%n%Cred%s%Creset%n%b\" --shortstat
+    d = diff -p --color --no-ext-diff --no-prefix
+    patch = diff --no-ext-diff --no-prefix
+[merge]
+    conflictstyle = diff3
+[rerere]
+    enabled = 1
+[core]
+	excludesfile = /home/shawn/.gitignore_global
+[credential]
+	helper = cache --timeout=86400
