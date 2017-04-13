@@ -17,6 +17,8 @@ colorscheme slate
 "F2 and F3 to move to next/previous buffer 
 map <F2> :bprev<CR>
 map <F3> :bnext<CR>
+map gi :GoImplements<CR>
+map gb <C-t>
 
 nnoremap n nzzzv
 nnoremap N Nzzzv
