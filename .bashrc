@@ -116,9 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export GOROOT=/home/shawn/bin/go1.8.1/go
-export PATH=$HOME/vmsync/bin:$GOROOT/bin:$PATH:/home/shawn/bin/google-cloud-sdk/bin
-export GOPATH=/home/shawn
+export GOPATH=$HOME
+export GOROOT=$HOME/bin/go1.8.1/go
+export PATH=$HOME/bin:$GOROOT/bin:$PATH
+export CGO_ENABLED=0
 
 source /home/shawn/bin/z.sh
 
@@ -131,9 +132,15 @@ export TMPDIR=/run/shm
 alias ls='ls -rtlh --color=auto'
 
 alias docker='sudo docker'
+alias cvlc='cvlc --play-and-exit '
 
 export CGO_ENABLED=0
 
 alias ssh='ssh -o ConnectTimeout=5 '
 
 alias gitrank='git log  --date=iso --format="%h %ai" --name-only  | sort | uniq -cd | sort -n'
+
+# Docker stuff
+alias docker='sudo docker'
+alias di='docker images'
+alias dps='docker ps -a --format "{{ .ID }} {{ .Names }} {{ .RunningFor }} {{ .Image }}" | column -t'
