@@ -144,3 +144,5 @@ alias gitrank='git log  --date=iso --format="%h %ai" --name-only  | sort | uniq 
 alias docker='sudo docker'
 alias di='docker images'
 alias dps='docker ps -a --format "{{ .ID }} {{ .Names }} {{ .RunningFor }} {{ .Image }}" | column -t'
+
+alias gitrank='git log  --date=iso --format="%h %ai" --name-only  | sort | uniq -cd | sort -n'
